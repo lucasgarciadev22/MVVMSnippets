@@ -1,0 +1,37 @@
+<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>ImplementInterface</Title>
+    <Shortcut>impint</Shortcut>
+    <Description>Implements an interface with its members empty</Description>
+    <Author>Lucas Garcia (lucasgarciadev22)</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>interfaceName</ID>
+        <ToolTip>Interface to be implemented.</ToolTip>
+        <Default>IMinhaInterface</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp" Kind="method body" Delimiter="$">
+      <![CDATA[
+public class MyClass : $interfaceName$
+{
+    public void Method1()
+    {
+        // To be implemented.
+    }
+
+    public int Method2()
+    {
+        / To be implemented.
+        return 0;
+    }
+}$
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

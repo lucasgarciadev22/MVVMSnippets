@@ -1,0 +1,43 @@
+<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>EncapsulateBoolProperty</Title>
+    <Shortcut>encapbool</Shortcut>
+    <Description>Encapsulates a boolean property with a PropertyChanged notification for MVVM pattern.</Description>
+    <Author>Lucas Garcia (lucasgarciadev22)</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>propertyName</ID>
+        <ToolTip>The name of the property to encapsulate.</ToolTip>
+        <Default>MyProperty</Default>
+      </Literal>
+      <Literal>
+        <ID>defaultValue</ID>
+        <ToolTip>The default value of the property.</ToolTip>
+        <Default>false</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp" Kind="method body" Delimiter="$">
+      <![CDATA[
+private bool _$propertyName$_ = $defaultValue$;
+
+public bool $propertyName$
+{
+    get => _$propertyName$_;
+    set
+    {
+        if (_$propertyName$_ == value)
+            return;
+
+        _$propertyName$_ = value;
+        OnPropertyChanged("$propertyName$");
+    }
+}$
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

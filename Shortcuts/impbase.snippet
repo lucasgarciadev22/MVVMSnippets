@@ -2,8 +2,8 @@
   <Header>
     <Title>ImplementBaseClass</Title>
     <Shortcut>impbase</Shortcut>
-    <Description>Implementa uma classe base com membros em branco.</Description>
-    <Author>Anonymous</Author>
+    <Description>Implements a base class with its members empty</Description>
+    <Author>Lucas Garcia (lucasgarciadev22)</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
@@ -12,13 +12,13 @@
     <Declarations>
       <Literal>
         <ID>baseClassName</ID>
-        <ToolTip>O nome da classe base a ser implementada.</ToolTip>
-        <Default>MinhaClasseBase</Default>
+        <ToolTip>The name of the class to be implemented.</ToolTip>
+        <Default>MyBaseClass</Default>
       </Literal>
     </Declarations>
     <Code Language="csharp" Kind="method body" Delimiter="$">
       <![CDATA[
-public class MyClass : $interfaceName$
+public class MyClass : $baseClassName$
 {
     public void Method1()
     {
@@ -32,3 +32,6 @@ public class MyClass : $interfaceName$
     }
 }$
 ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

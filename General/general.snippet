@@ -1,60 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-    
-    <!-- MVVM SNIPPETS-->
-    <CodeSnippet Format="1.0.0">
-        <Header>
-            <Title>Default MVVM property declaration</Title>
-            <Author>Lucas Garcia (lucasgarciadev22)</Author>
-            <Description>Creates a default MVVM property declaration</Description>
-            <Shortcut>mvvmprop</Shortcut>
-        </Header>
-        <Snippet>
-            <Code Language="CSharp">
-                <![CDATA[private $Type$ _$nonAcessiblePropName$; public $Type$ $PropertyName$ { get { return _$nonAcessiblePropName$; } set { _$nonAcessiblePropName$ = value; OnPropertyChanged(); } }$end$]]>
-            </Code>
-            <Declarations>
-                <Literal>
-                    <ID>Type</ID>
-                    <ToolTip>Fill property type</ToolTip>
-                    <Default>Type</Default>
-                </Literal>
-                <Literal>
-                    <ID>nonAcessiblePropName</ID>
-                    <ToolTip>Fill non acessible property name</ToolTip>
-                    <Default>nonAcessiblePropName</Default>
-                </Literal>
-                <Literal>
-                    <ID>PropertyName</ID>
-                    <ToolTip>Fill mvvm property name</ToolTip>
-                    <Default>PropertyName</Default>
-                </Literal>
-            </Declarations>
-        </Snippet>
-    </CodeSnippet>
-
-    <CodeSnippet Format="1.0.0">
-        <Header>
-            <Title>Default MVVM command declaration</Title>
-            <Author>Lucas Garcia (lucasgarciadev22)</Author>
-            <Description>Creates a default MVVM command declaration</Description>
-            <Shortcut>mvvmcommand</Shortcut>
-        </Header>
-        <Snippet>
-            <Code Language="CSharp">
-                <![CDATA[public ICommand $CommandName$ => new DelegateCommand(CommandMethod);$end$]]>
-            </Code>
-            <Declarations>
-                <Literal>
-                    <ID>CommandName</ID>
-                    <ToolTip>Fill command name</ToolTip>
-                    <Default>CommandName</Default>
-                </Literal>
-            </Declarations>
-        </Snippet>
-    </CodeSnippet>
-
-    <!-- GENERAL SNIPPETS-->
     <CodeSnippet Format="1.0.0">
         <Header>
             <Title>Create default If/Else structure</Title>
@@ -127,7 +72,7 @@
             <Title>Creates a default public void method</Title>
             <Author>Lucas Garcia (lucasgarciadev22)</Author>
             <Description>Create a default public method</Description>
-            <Shortcut>pum</Shortcut>
+            <Shortcut>pumt</Shortcut>
         </Header>
         <Snippet>
             <Code Language="CSharp">

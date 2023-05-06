@@ -12,24 +12,30 @@
     <Declarations>
       <Literal>
         <ID>baseClassName</ID>
-        <ToolTip>The name of the class to be implemented.</ToolTip>
+        <ToolTip>The name of the base class to be implemented.</ToolTip>
         <Default>MyBaseClass</Default>
+      </Literal>
+      <Literal>
+        <ID>className</ID>
+        <ToolTip>The name of the class to be implemented.</ToolTip>
+        <Default>MyClass</Default>
+      </Literal>
+      <Literal>
+        <ID>arg</ID>
+        <ToolTip>The name of the class arguments to be implemented.</ToolTip>
+        <Default>myArg</Default>
       </Literal>
     </Declarations>
     <Code Language="csharp" Kind="method body" Delimiter="$">
       <![CDATA[
-public class MyClass : $baseClassName$
+public class $className$ : $baseClassName$
 {
-    public void Method1()
+  public $className$($arg$,) : base($arg$,)
     {
         // To be implemented.
     }
 
-    public int Method2()
-    {
-        / To be implemented.
-        return 0;
-    }
+  $baseClassName$ members
 }$
 ]]>
     </Code>

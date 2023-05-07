@@ -2,18 +2,18 @@
     "EncapsulateBoolProperty": {
         "prefix": "encbool",
         "body": [
-            "private bool _$propertyName$_ = $defaultValue$;",
+            "private bool _$privateProp$ = $defaultValue$;",
             "",
-            "public bool $propertyName$",
+            "public bool $publicProp$",
             "{",
-            "\tget => _$propertyName$_;",
+            "\tget => _$privateProp;",
             "\tset",
             "\t{",
-            "\t\tif (_$propertyName$_ == value)",
+            "\t\tif (_$privateProp == value)",
             "\t\t\treturn;",
             "",
-            "\t\t_$propertyName$_ = value;",
-            "\t\tOnPropertyChanged(\"$propertyName$\");",
+            "\t\t_$privateProp = value;",
+            "\t\tOnPropertyChanged(\"$publicProp$\");",
             "\t}",
             "}$"
         ],
@@ -21,16 +21,186 @@
         "author": "Lucas Garcia (lucasgarciadev22)",
         "snippetType": "Expansion",
         "variables": {
-            "propertyName": {
-                "description": "The name of the property to encapsulate.",
-                "default": "MyProperty",
-                "tooltip": "The name of the property to encapsulate."
-            },
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			},
             "defaultValue": {
                 "description": "The default value of the property.",
                 "default": "false",
                 "tooltip": "The default value of the property."
             }
         }
+    },
+
+    "EncapsulateIntProperty": {
+    "prefix": "encint",
+    "body": [
+        "private int _$privateProp$ = $defaultValue$;",
+        "",
+        "public int $publicProp$",
+        "{",
+        "\tget => _$privateProp;",
+        "\tset",
+        "\t{",
+        "\t\tif (_$privateProp == value)",
+        "\t\t\treturn;",
+        "",
+        "\t\t_$privateProp = value;",
+        "\t\tOnPropertyChanged(\"$publicProp$\");",
+        "\t}",
+        "}$"
+    ],
+    "description": "Encapsulates an integer property with a PropertyChanged notification for MVVM pattern.",
+    "author": "Lucas Garcia (lucasgarciadev22)",
+    "snippetType": "Expansion",
+    "variables": {
+        "privateProp": {
+            "default": "privateProp",
+            "description": "Your non accessible property name",
+            "tooltip": "Your non accessible property name"
+        },
+        "publicProp": {
+            "default": "PublicProp",
+            "description": "Your public property name",
+            "tooltip": "Your public property name"
+        },
+        "defaultValue": {
+            "description": "The default value of the property.",
+            "default": "0",
+            "tooltip": "The default value of the property."
+        }
+        }
+    },
+
+    "EncapsulateStringProperty": {
+    "prefix": "encstring",
+    "body": [
+        "private string _$privateProp$ = \"$defaultValue$\";",
+        "",
+        "public string $publicProp$",
+        "{",
+        "\tget => _$privateProp;",
+        "\tset",
+        "\t{",
+        "\t\tif (_$privateProp == value)",
+        "\t\t\treturn;",
+        "",
+        "\t\t_$privateProp = value;",
+        "\t\tOnPropertyChanged(\"$publicProp$\");",
+        "\t}",
+        "}$"
+    ],
+    "description": "Encapsulates a string property with a PropertyChanged notification for MVVM pattern.",
+    "author": "Lucas Garcia (lucasgarciadev22)",
+    "snippetType": "Expansion",
+    "variables": {
+        "privateProp": {
+            "default": "privateProp",
+            "description": "Your non accessible property name",
+            "tooltip": "Your non accessible property name"
+        },
+        "publicProp": {
+            "default": "PublicProp",
+            "description": "Your public property name",
+            "tooltip": "Your public property name"
+        },
+        "defaultValue": {
+            "description": "The default value of the property.",
+            "default": "",
+            "tooltip": "The default value of the property."
+        }
     }
+},
+
+"EncapsulateDoubleProperty": {
+    "prefix": "encdouble",
+    "body": [
+        "private double _$privateProp$ = $defaultValue$;",
+        "",
+        "public double $publicProp$",
+        "{",
+        "\tget => _$privateProp;",
+        "\tset",
+        "\t{",
+        "\t\tif (_$privateProp == value)",
+        "\t\t\treturn;",
+        "",
+        "\t\t_$privateProp = value;",
+        "\t\tOnPropertyChanged(\"$publicProp$\");",
+        "\t}",
+        "}$"
+    ],
+    "description": "Encapsulates a double property with a PropertyChanged notification for MVVM pattern.",
+    "author": "Lucas Garcia (lucasgarciadev22)",
+    "snippetType": "Expansion",
+    "variables": {
+        "privateProp": {
+            "default": "privateProp",
+            "description": "Your non accessible property name",
+            "tooltip": "Your non accessible property name"
+        },
+        "publicProp": {
+            "default": "PublicProp",
+            "description": "Your public property name",
+            "tooltip": "Your public property name"
+        },
+        "defaultValue": {
+            "description": "The default value of the property.",
+            "default": "0.0",
+            "tooltip": "The default value of the property."
+        }
+    }
+},
+
+"EncapsulateProperty": {
+    "prefix": "encprop",
+    "body": [
+        "private $type$ _$privateProp$ = $defaultValue$;",
+        "",
+        "public $type$ $publicProp$",
+        "{",
+        "\tget => _$privateProp;",
+        "\tset",
+        "\t{",
+        "\t\tif (_$privateProp == value)",
+        "\t\t\treturn;",
+        "",
+        "\t\t_$privateProp = value;",
+        "\t\tOnPropertyChanged(\"$publicProp$\");",
+        "\t}",
+        "}$"
+    ],
+    "description": "Encapsulates a double property with a PropertyChanged notification for MVVM pattern.",
+    "author": "Lucas Garcia (lucasgarciadev22)",
+    "snippetType": "Expansion",
+    "variables": {
+        "privateProp": {
+            "default": "privateProp",
+            "description": "Your non accessible property name",
+            "tooltip": "Your non accessible property name"
+        },
+        "publicProp": {
+            "default": "PublicProp",
+            "description": "Your public property name",
+            "tooltip": "Your public property name"
+        },
+        "defaultValue": {
+            "description": "The default value of the property.",
+            "default": "0.0",
+            "tooltip": "The default value of the property."
+        },
+        "type": {
+        "default": "Type",
+        "description": "The type of the property to encapsulate.",
+        "tooltip": "The type of the property to encapsulate."
+	    }
+    }
+}
 }

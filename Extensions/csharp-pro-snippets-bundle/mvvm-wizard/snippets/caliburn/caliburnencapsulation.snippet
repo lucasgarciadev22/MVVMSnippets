@@ -24,17 +24,17 @@
     </Declarations>
     <Code Language="csharp" Kind="method body" Delimiter="$">
       <![CDATA[
-private bool _$propertyName$_ = $defaultValue$;
+private bool _$propertyName$ = $defaultValue$;
 
 public bool $propertyName$
 {
-    get => _$propertyName$_;
+    get => _$propertyName$;
     set
     {
-        if (_$propertyName$_ == value)
+        if (_$propertyName$ == value)
             return;
 
-        _$propertyName$_ = value;
+        _$propertyName$ = value;
         OnPropertyChanged(()=> $propertyName$);
     }
 }$

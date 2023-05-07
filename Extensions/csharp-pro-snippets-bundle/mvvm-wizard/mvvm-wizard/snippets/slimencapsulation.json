@@ -1,31 +1,27 @@
 {
 	"Default MVVM property declaration": {
-		"prefix": "smvvmprop",
+		"prefix": "scalenc",
 		"body": [
-			"private $Type$ _$privateProp$; ",
-			"public $Type$ $publicProp$ {",
-			"\tget { return _$privateProp$; } ",
-			"\tset { _$privateProp$ = value; OnPropertyChanged(()=>$publicProp$); }",
-			"}$end$"
+			"private $type$ _$privateProp$; ","public $type$ $publicProp$ {","get => _$privateProp$; } ","set { _$privateProp$ = value; OnPropertyChanged(()=>$publicProp$); }","}$end$"
 		],
 		"description": "Creates a single liner MVVM property declaration",
 		"author": "Lucas Garcia (lucasgarciadev22)",
 		"snippetType": "Expansion",
 		"variables": {
-			"Type": {
+			"type": {
 				"default": "Type",
-				"description": "Fill property type",
-				"tooltip": "Fill property type"
+				"description": "The type of the property to encapsulate.",
+				"tooltip": "The type of the property to encapsulate."
 			},
 			"privateProp": {
-				"default": "nonAccessibleProp",
+				"default": "privateProp",
 				"description": "Your non accessible property name",
 				"tooltip": "Your non accessible property name"
 			},
 			"publicProp": {
 				"default": "PublicProp",
-				"description": "Your MVVM property name",
-				"tooltip": "Your MVVM property name"
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
 			}
 		}
 	}

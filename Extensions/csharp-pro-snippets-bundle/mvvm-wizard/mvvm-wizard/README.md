@@ -1,6 +1,6 @@
 # MVVM Wizard
 
-## Welcome to the MVVM Wizard! 🧙‍♀️ This extension is designed to make your life easier by providing code snippets for those who use the MVVM and SOLID design patterns in C#.
+## Welcome to the MVVM Wizard! 🧙‍♀️ This extension is designed to make your life easier by providing code snippets for those who use the MVVM design pattern in C#.
 
 ### Features
 
@@ -22,7 +22,6 @@ Our extension requires Visual Studio Code to be installed on your machine. No ad
 Our extension contributes the following settings:
 
 ``mvvm-wizard.enable: Enable/disable this extension.``
-``mvvm-wizard.snippetType: Choose which type of snippet to use (MVVM, Caliburn, or both).``
 
 ### Known Issues
 
@@ -39,6 +38,7 @@ We are committed to providing regular updates and bug fixes to ensure that our e
 We welcome contributions from anyone who is interested in improving the **MVVM Wizard!** Whether you want to add new code snippets, improve our user interface, or fix bugs, we would love to hear from you. Check out our GitHub page for more information on how to get involved.
 
 **Get Started**
+
 To get started with the **MVVM Wizard**, simply download our extension from the Visual Studio Code Marketplace. Once installed, you can access our code snippets by typing "mvvm-" in your C# file.
 
 Thank you for choosing the **MVVM Wizard!** We hope our extension helps you become a better and more efficient C# developer. 🚀

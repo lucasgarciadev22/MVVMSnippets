@@ -2,18 +2,18 @@
 	"EncapsulateBoolProperty with Caliburn Micro": {
 		"prefix": "calencbool",
 		"body": [
-			"private bool _$propertyName$_ = $defaultValue$;",
+			"private bool _$privateProp$ = $defaultValue$;",
 			"",
-			"public bool $propertyName$",
+			"public bool $publicProp$",
 			"{",
-			"\tget => _$propertyName$_;",
+			"\tget => _$privateProp$;",
 			"\tset",
 			"\t{",
-			"\t\tif (_$propertyName$_ == value)",
+			"\t\tif (_$privateProp$ == value)",
 			"\t\t\treturn;",
 			"",
-			"\t\t_$propertyName$_ = value;",
-			"\t\tOnPropertyChanged(() => $propertyName$);",
+			"\t\t_$privateProp$ = value;",
+			"\t\tOnPropertyChanged(() => $publicProp$);",
 			"\t}",
 			"}$end$"
 		],
@@ -21,10 +21,15 @@
 		"author": "Lucas Garcia (lucasgarciadev22)",
 		"snippetType": "Expansion",
 		"variables": {
-			"propertyName": {
-				"default": "MyProperty",
-				"description": "The name of the property to encapsulate.",
-				"tooltip": "The name of the property to encapsulate."
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
 			},
 			"defaultValue": {
 				"default": "false",
@@ -32,5 +37,165 @@
 				"tooltip": "The default value of the property."
 			}
 		}
+	},
+
+	"EncapsulateIntProperty with Caliburn Micro": {
+		"prefix": "calencint",
+		"body": [
+			"private int _$privateProp$ = $defaultValue$;",
+			"",
+			"public int $publicProp$",
+			"{",
+			"\tget => _$privateProp$;",
+			"\tset",
+			"\t{",
+			"\t\tif (_$privateProp$ == value)",
+			"\t\t\treturn;",
+			"",
+			"\t\t_$privateProp$ = value;",
+			"\t\tOnPropertyChanged(() => $publicProp$);",
+			"\t}",
+			"}$end$"
+		],
+		"description": "Encapsulates an integer property with a PropertyChanged notification for MVVM pattern with Caliburn Micro.",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			},
+			"defaultValue": {
+				"default": "0",
+				"description": "The default value of the integer property.",
+				"tooltip": "The default value of the integer property."
+			}
+		}
+	},
+
+	"EncapsulateStringProperty with Caliburn Micro": {
+		"prefix": "calencstring",
+		"body": [
+			"private string _$privateProp$ = $defaultValue$;",
+			"",
+			"public string $publicProp$",
+			"{",
+			"\tget => _$privateProp$;",
+			"\tset",
+			"\t{",
+			"\t\tif (_$privateProp$ == value)",
+			"\t\t\treturn;",
+			"",
+			"\t\t_$privateProp$ = value;",
+			"\t\tOnPropertyChanged(() => $publicProp$);",
+			"\t}",
+			"}$end$"
+		],
+		"description": "Encapsulates a string property with a PropertyChanged notification for MVVM pattern with Caliburn Micro.",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			},
+			"defaultValue": {
+				"default": "\"\"",
+				"description": "The default value of the property.",
+				"tooltip": "The default value of the property."
+			}
+		}
+	},
+
+	"EncapsulateDoubleProperty with Caliburn Micro": {
+		"prefix": "calencdouble",
+		"body": [
+			"private double _$privateProp$ = $defaultValue$;",
+			"",
+			"public double $publicProp$",
+			"{",
+			"\tget => _$privateProp$;",
+			"\tset",
+			"\t{",
+			"\t\tif (_$privateProp$ == value)",
+			"\t\t\treturn;",
+			"",
+			"\t\t_$privateProp$ = value;",
+			"\t\tOnPropertyChanged(() => $publicProp$);",
+			"\t}",
+			"}$end$"
+		],
+		"description": "Encapsulates a double property with a PropertyChanged notification for MVVM pattern with Caliburn Micro.",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			},
+			"defaultValue": {
+				"default": "0.0",
+				"description": "The default value of the property.",
+				"tooltip": "The default value of the property."
+			}
+		}
+	},
+
+	"EncapsulateProperty with Caliburn Micro": {
+    "prefix": "calencprop",
+    "body": [
+        "private $type$ _$propertyName$ = $defaultValue$;",
+        "",
+        "public $type$ $propertyName$",
+        "{",
+        "\tget => _$propertyName$;",
+        "\tset",
+        "\t{",
+        "\t\tif (Equals(_$propertyName$, value))",
+        "\t\t\treturn;",
+        "",
+        "\t\t_$propertyName$ = value;",
+        "\t\tOnPropertyChanged(() => $propertyName$);",
+        "\t}",
+        "}$end$"
+    ],
+    "description": "Encapsulates a type sensitive property with a PropertyChanged notification for MVVM pattern with Caliburn Micro.",
+    "author": "Lucas Garcia (lucasgarciadev22)",
+    "snippetType": "Expansion",
+    "variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			},
+      "type": {
+          "default": "Type",
+          "description": "The type of the property to encapsulate.",
+          "tooltip": "The type of the property to encapsulate."
+      }
+    }
 	}
 }

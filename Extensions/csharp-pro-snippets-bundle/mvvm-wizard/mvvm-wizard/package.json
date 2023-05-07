@@ -1,0 +1,93 @@
+{
+  "name": "mvvm-wizard",
+  "displayName": "MVVM Wizard",
+  "description": "Special set of snippets to make your life easier when coding with C#, using  MVVM pattern... ",
+  "version": "0.0.4",
+  "icon": "img/icon.png",
+  "author": "lucasgarciadev22",
+  "publisher": "lucasgarciadev22",
+  "license": "MIT",
+  "licenses": [
+    {
+        "type": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "files": [
+    "out",
+    "LICENSE"
+  ],
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "languages": [
+  {
+    "id": "csharp",
+    "aliases": [
+      "C#",
+      "csharp",
+      "cs"
+    ]
+  },
+  {
+    "id": "xml",
+    "aliases": [
+      "XAML",
+      "xaml"
+    ]
+  }
+  ],
+  "activationEvents": [
+  "onLanguage:csharp",
+   "onLanguage:xaml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+  "commands": [],
+  "snippets": [
+    {
+      "language": "csharp",
+      "path": "./snippets/caliburnencapsulation.snippet",
+      "prefix":"calencbool"
+    },
+    {
+      "language": "csharp",
+      "path": "./snippets/encapsulation.snippet",
+       "prefix":"encbool"
+    },
+    {
+      "language": "csharp",
+      "path": "./snippets/slimencapsulation.snippet",
+       "prefix":"smvvmprop"
+    }
+  ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasgarciadev22/VSCode-Extensions"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/test-electron": "^2.3.0"
+  }
+}

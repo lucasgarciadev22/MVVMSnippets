@@ -1,0 +1,32 @@
+{
+	"Default MVVM property declaration": {
+		"prefix": "smvvmprop",
+		"body": [
+			"private $Type$ _$privateProp$; ",
+			"public $Type$ $publicProp$ {",
+			"\tget { return _$privateProp$; } ",
+			"\tset { _$privateProp$ = value; OnPropertyChanged(()=>$publicProp$); }",
+			"}$end$"
+		],
+		"description": "Creates a single liner MVVM property declaration",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"Type": {
+				"default": "Type",
+				"description": "Fill property type",
+				"tooltip": "Fill property type"
+			},
+			"privateProp": {
+				"default": "nonAccessibleProp",
+				"description": "Your non accessible property name",
+				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your MVVM property name",
+				"tooltip": "Your MVVM property name"
+			}
+		}
+	}
+}

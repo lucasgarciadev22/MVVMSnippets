@@ -1,0 +1,36 @@
+{
+	"EncapsulateBoolProperty with Caliburn Micro": {
+		"prefix": "calencbool",
+		"body": [
+			"private bool _$propertyName$_ = $defaultValue$;",
+			"",
+			"public bool $propertyName$",
+			"{",
+			"\tget => _$propertyName$_;",
+			"\tset",
+			"\t{",
+			"\t\tif (_$propertyName$_ == value)",
+			"\t\t\treturn;",
+			"",
+			"\t\t_$propertyName$_ = value;",
+			"\t\tOnPropertyChanged(() => $propertyName$);",
+			"\t}",
+			"}$end$"
+		],
+		"description": "Encapsulates a boolean property with a PropertyChanged notification for MVVM pattern with Caliburn Micro.",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"propertyName": {
+				"default": "MyProperty",
+				"description": "The name of the property to encapsulate.",
+				"tooltip": "The name of the property to encapsulate."
+			},
+			"defaultValue": {
+				"default": "false",
+				"description": "The default value of the property.",
+				"tooltip": "The default value of the property."
+			}
+		}
+	}
+}

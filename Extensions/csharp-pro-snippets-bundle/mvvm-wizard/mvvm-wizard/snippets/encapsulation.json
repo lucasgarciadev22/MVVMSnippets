@@ -15,7 +15,7 @@
             "\t\t_$privateProp = value;",
             "\t\tOnPropertyChanged(\"$publicProp$\");",
             "\t}",
-            "}$"
+            "}$end$"
         ],
         "description": "Encapsulates a boolean property with a PropertyChanged notification for MVVM pattern.",
         "author": "Lucas Garcia (lucasgarciadev22)",
@@ -55,7 +55,7 @@
         "\t\t_$privateProp = value;",
         "\t\tOnPropertyChanged(\"$publicProp$\");",
         "\t}",
-        "}$"
+        "}$end$"
     ],
     "description": "Encapsulates an integer property with a PropertyChanged notification for MVVM pattern.",
     "author": "Lucas Garcia (lucasgarciadev22)",
@@ -95,7 +95,7 @@
         "\t\t_$privateProp = value;",
         "\t\tOnPropertyChanged(\"$publicProp$\");",
         "\t}",
-        "}$"
+        "}$end$"
     ],
     "description": "Encapsulates a string property with a PropertyChanged notification for MVVM pattern.",
     "author": "Lucas Garcia (lucasgarciadev22)",
@@ -135,7 +135,7 @@
         "\t\t_$privateProp = value;",
         "\t\tOnPropertyChanged(\"$publicProp$\");",
         "\t}",
-        "}$"
+        "}$end$"
     ],
     "description": "Encapsulates a double property with a PropertyChanged notification for MVVM pattern.",
     "author": "Lucas Garcia (lucasgarciadev22)",
@@ -175,7 +175,7 @@
         "\t\t_$privateProp = value;",
         "\t\tOnPropertyChanged(\"$publicProp$\");",
         "\t}",
-        "}$"
+        "}$end$"
     ],
     "description": "Encapsulates a double property with a PropertyChanged notification for MVVM pattern.",
     "author": "Lucas Garcia (lucasgarciadev22)",

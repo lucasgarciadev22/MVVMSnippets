@@ -1,0 +1,160 @@
+{
+    "Encapsulate ICommand": {
+        "prefix": "relcom",
+        "body": [
+            "private RelayCommand _$privateProp$;",
+            "",
+            "public ICommand $publicProp$",
+            "{",
+            "\tget",
+            "\t{",
+            "\t\tif (_$privateProp$ == null)",
+            "\t\t{",
+            "\t\t\t_$privateProp$ = new RelayCommand($execute$, $canExecute$);",
+            "\t\t}",
+            "\t\treturn _$privateProp$;",
+            "\t}",
+            "}",
+            "",
+            "private bool $canExecute$(object obj)",
+            "{",
+            "\treturn true;",
+            "}",
+            "",
+            "private void $execute$(object obj)",
+            "{",
+            "\t//TODO: Implement the command logic here.",
+            "}$end$"
+        ],
+        "description": "Encapsulates a RelayCommand property with a ICommand interface for MVVM pattern.",
+        "author": "Lucas Garcia (lucasgarciadev22)",
+        "snippetType": "Expansion",
+        "variables": {
+            "privateProp": {
+                "default": "privateProp",
+                "description": "Your private property name",
+                "tooltip": "Your private property name"
+            },
+            "publicProp": {
+                "default": "PublicProp",
+                "description": "Your public property name",
+                "tooltip": "Your public property name"
+            },
+            "execute": {
+                "default": "Execute",
+                "description": "The name of the method to be executed by the command.",
+                "tooltip": "The name of the method to be executed by the command."
+            },
+            "canExecute": {
+                "default": "CanExecute",
+                "description": "The name of the method that determines if the command can execute.",
+                "tooltip": "The name of the method that determines if the command can execute."
+            }
+        }
+    },
+    "Encapsulate DelegateCommand": {
+        "prefix": "deltcom",
+        "body": [
+            "private DelegateCommand<$type$> _$privateProp$;",
+            "public DelegateCommand<$type$> $publicProp$ => _$privateProp$ ?? (_$privateProp$ = new DelegateCommand<$type$>($execute$, $canExecute$));",
+            "",
+            "private void $execute$($type$ parameter) {",
+            "\t// To be implemented",
+            "}",
+            "",
+            "private bool $canExecute$($type$ parameter) {",
+            "\t// To be implemented",
+            "\treturn true;",
+            "}",
+            "",
+            "$end$"
+        ],
+        "description": "Encapsulates a typed DelegateCommand property with Execute and CanExecute methods",
+        "author": "Lucas Garcia (lucasgarciadev22)",
+        "snippetType": "Expansion",
+        "variables": {
+            "type": {
+                "default": "Type",
+                "description": "The type of the delegate command",
+                "tooltip": "The type of the delegate command"
+            },
+            "privateProp": {
+                "default": "privateProp",
+                "description": "Your private property name",
+                "tooltip": "Your private property name"
+            },
+            "publicProp": {
+                "default": "PublicProp",
+                "description": "Your public property name",
+                "tooltip": "Your public property name"
+            },
+            "execute": {
+                "default": "Execute",
+                "description": "The name of the Execute method",
+                "tooltip": "The name of the Execute method"
+            },
+            "canExecute": {
+                "default": "CanExecute",
+                "description": "The name of the CanExecute method",
+                "tooltip": "The name of the CanExecute method"
+            }
+        }
+    },
+    "MVVM DelegateCommand Declaration": {
+        "prefix": "delcomeasy",
+        "body": [
+            "private DelegateCommand _$privateProp$Command; ",
+            "public DelegateCommand $publicProp$Command {",
+            "get {",
+            "if (_$privateProp$Command == null)",
+            "_$privateProp$Command = new DelegateCommand($action$, Can$publicProp$Command);",
+            "return _$privateProp$Command;",
+            "}",
+            "}",
+            "",
+            "void $action$(object parameter)",
+            "{",
+            "$void$();",
+            "}",
+            "",
+            "bool Can$publicProp$Command() => Can$publicProp$;",
+            "public bool Can$publicProp$ => VerifyCan$publicProp$();",
+            "",
+            "bool VerifyCan$publicProp$()",
+            "{",
+            "//To be Implemented.",
+            "}",
+            "",
+            "void $void$()",
+            "{",
+            "//To be implemented.",
+            "}",
+            "$end$"
+        ],
+        "description": "Creates a short version od MVVM DelegateCommand declaration (also used with MVVM Easy).",
+        "author": "Lucas Garcia (lucasgarciadev22)",
+        "snippetType": "Expansion",
+        "variables": {
+            "privateProp": {
+                "default": "_privateProp",
+                "description": "Your private property name",
+                "tooltip": "Your private property name"
+            },
+            "publicProp": {
+                "default": "PublicProp",
+                "description": "Your public property name",
+                "tooltip": "Your public property name"
+            },
+            "action": {
+                "default": "MyAction",
+                "description": "Your action method name",
+                "tooltip": "Your action method name"
+            },
+            "void": {
+                "default": "MyVoid",
+                "description": "Your void method name",
+                "tooltip": "Your void method name"
+            }
+        }
+    }
+}

@@ -31,9 +31,10 @@ We are constantly working to improve the **MVVM Wizard** and address any issues 
 
 We are committed to providing regular updates and bug fixes to ensure that our extension meets the needs of our users. Here are some of the most recent changes we've made:
 
-*0.0.2*
-*Initial pre-release of MVVM Wizard*
-*Added MVVM code snippets base*
+*0.0.7*
+*Initial pre-release phase of MVVM Wizard*
+*Added MVVM code snippets...*
+*Bug Fixes*
 
 We welcome contributions from anyone who is interested in improving the **MVVM Wizard!** Whether you want to add new code snippets, improve our user interface, or fix bugs, we would love to hear from you. Check out our GitHub page for more information on how to get involved.
 

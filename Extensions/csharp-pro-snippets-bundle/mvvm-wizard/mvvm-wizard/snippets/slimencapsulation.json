@@ -4,7 +4,7 @@
 		"body": [
 			"private $type$ _$privateProp$; ","public $type$ $publicProp$ {","get => _$privateProp$; } ","set { _$privateProp$ = value; OnPropertyChanged(()=>$publicProp$); }","}$end$"
 		],
-		"description": "Creates a single liner MVVM property declaration",
+		"description": "Creates a single liner MVVM type sensitive property declaration",
 		"author": "Lucas Garcia (lucasgarciadev22)",
 		"snippetType": "Expansion",
 		"variables": {
@@ -17,6 +17,94 @@
 				"default": "privateProp",
 				"description": "Your non accessible property name",
 				"tooltip": "Your non accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			}
+		}
+	},
+
+	"Default MVVM bool property declaration": {
+		"prefix": "scalencbool",
+		"body": [
+			"private bool _$privateProp$; ","public bool $publicProp$ {","get => _$privateProp$; } ","set { if (_$privateProp$ != value) {_$privateProp$ = value; OnPropertyChanged(()=>$publicProp$);}}","}$end$"
+		],
+		"description": "Creates a single liner MVVM property declaration for a bool",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non-accessible property name",
+				"tooltip": "Your non-accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			}
+		}
+	},
+
+	"Default MVVM int property declaration": {
+		"prefix": "int",
+		"body": [
+			"private int _$privateProp$; ","public int $publicProp$ {","get => _$privateProp$; } ","set { if (_$privateProp$ != value) {_$privateProp$ = value; OnPropertyChanged(()=>$publicProp$);}}","}$end$"
+		],
+		"description": "Creates a single liner MVVM property declaration for an int",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non-accessible property name",
+				"tooltip": "Your non-accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			}
+		}
+	},
+
+	"Default MVVM string property declaration": {
+		"prefix": "string",
+		"body": [
+			"private string _$privateProp$; ","public string $publicProp$ {","get => _$privateProp$; } ","set { if (_$privateProp$ != value) {_$privateProp$ = value; OnPropertyChanged(()=>$publicProp$);}}","}$end$"
+		],
+		"description": "Creates a single liner MVVM property declaration for a string",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non-accessible property name",
+				"tooltip": "Your non-accessible property name"
+			},
+			"publicProp": {
+				"default": "PublicProp",
+				"description": "Your public property name",
+				"tooltip": "Your public property name"
+			}
+		}
+	},
+
+	"Default MVVM double property declaration": {
+		"prefix": "double",
+		"body": [
+			"private double _$privateProp$; ","public double $publicProp$ {","get => _$privateProp$; } ","set { if (_$privateProp$ != value) {_$privateProp$ = value; OnPropertyChanged(()=>$publicProp$);}}","}$end$"
+		],
+		"description": "Creates a single liner MVVM property declaration for a double",
+		"author": "Lucas Garcia (lucasgarciadev22)",
+		"snippetType": "Expansion",
+		"variables": {
+			"privateProp": {
+				"default": "privateProp",
+				"description": "Your non-accessible property name",
+				"tooltip": "Your non-accessible property name"
 			},
 			"publicProp": {
 				"default": "PublicProp",

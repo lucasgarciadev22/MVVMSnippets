@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>ModernBox.csproj</id>
+    <version>1.0.0</version>
+    <authors>lucasgarciadev22</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <description>A new modern MessageBox style for WPF based projects</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright © 2023 Lucas Garcia</copyright>
+    <tags>messagebox ui modern wpf csharp</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SampleDependency" version="1.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+	<files>
+		<file src=".\docs\README.md" target="docs\"/>
+		<file src=".\docs\LICENSE.txt" target="docs\"/>
+		<file src=".\docs\icon.png" target="docs\"/>
+	</files>
+</package>

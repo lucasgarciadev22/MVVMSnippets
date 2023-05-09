@@ -2,7 +2,7 @@
 	"Default MVVM property declaration": {
 		"prefix": "scalenc",
 		"body": [
-			"private $type$ _$privateProp$; ","public $type$ $publicProp$ {","get => _$privateProp$; } ","set { _$privateProp$ = value; OnPropertyChanged(()=>$publicProp$); }","}$end$"
+			"private ${type} _${privateProp}; ","public ${type} ${publicProp} {","get => _${privateProp}; } ","set { _$privateProp = value; OnPropertyChanged(()=>${publicProp}); }","}${end}"
 		],
 		"description": "Creates a single liner MVVM type sensitive property declaration",
 		"author": "Lucas Garcia (lucasgarciadev22)",

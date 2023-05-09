@@ -2,24 +2,23 @@
 	"Default MVVM property declaration": {
 		"prefix": "scalenc",
 		"body": [
-			"private ${type} _${privateProp}; ","public ${type} ${publicProp} {","get => _${privateProp}; } ","set { _$privateProp = value; OnPropertyChanged(()=>${publicProp}); }","}${end}"
+			"using Caliburn.Micro;",
+			"",
+			"private ${1:Type} _${2:privateProp}; ","public $Type ${3:PublicProp} {","get => _$privateProp; } ","set { _$privateProp = value; NotifyOfPropertyChange(()=>$PublicProp); }","}"
 		],
 		"description": "Creates a single liner MVVM type sensitive property declaration",
 		"author": "Lucas Garcia (lucasgarciadev22)",
 		"snippetType": "Expansion",
 		"variables": {
-			"type": {
-				"default": "Type",
+			"Type": {
 				"description": "The type of the property to encapsulate.",
 				"tooltip": "The type of the property to encapsulate."
 			},
 			"privateProp": {
-				"default": "privateProp",
 				"description": "Your non accessible property name",
 				"tooltip": "Your non accessible property name"
 			},
 			"publicProp": {
-				"default": "PublicProp",
 				"description": "Your public property name",
 				"tooltip": "Your public property name"
 			}
@@ -29,7 +28,9 @@
 	"Default MVVM bool property declaration": {
 		"prefix": "scalencbool",
 		"body": [
-			"private bool _$privateProp$; ","public bool $publicProp$ {","get => _$privateProp$; } ","set { if (_$privateProp$ != value) {_$privateProp$ = value; OnPropertyChanged(()=>$publicProp$);}}","}$end$"
+			"using Caliburn.Micro;",
+			"",
+			"private bool _$privateProp; ","public bool $PublicProp {","get => _$privateProp; } ","set { if (_$privateProp != value) {_$privateProp = value; NotifyOfPropertyChange(()=>$PublicProp);}}","}"
 		],
 		"description": "Creates a single liner MVVM property declaration for a bool",
 		"author": "Lucas Garcia (lucasgarciadev22)",
